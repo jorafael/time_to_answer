@@ -1,5 +1,8 @@
 {
   "name": "time_to_answer",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gentelella": "^1.4.0",
+    "startbootstrap-sb-admin-2": "^4.0.7"
+  }
 }

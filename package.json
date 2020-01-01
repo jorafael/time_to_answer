@@ -2,7 +2,7 @@
   "name": "time_to_answer",
   "private": true,
   "dependencies": {
-    "gentelella": "^1.4.0",
+    "admin-lte": "^3.0.1",
     "startbootstrap-sb-admin-2": "^4.0.7"
   }
 }

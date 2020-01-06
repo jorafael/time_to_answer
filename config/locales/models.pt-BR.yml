@@ -7,16 +7,18 @@
       user:
         one: Usuário
         other: Usuários
-    atributes:
+    attributes:
       admin:
         id: Id
         email: Email
         password: Senha
+        password_confirmation: Confirmação de Senha
         created_at: Criado em
         updated_at: Atualizado em
       user:
         id: Id
         email: Email
         password: Senha
+        password_confirmation: Confirmação de Senha
         created_at: Criado em
         updated_at: Atualizado em

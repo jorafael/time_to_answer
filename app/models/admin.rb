@@ -6,5 +6,9 @@ class Admin < ApplicationRecord
         #  :lockable, :timeoutable, :trackable
 
   devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable  
+        :recoverable, :rememberable, :validatable
+
+  #kaminari
+  paginates_per 5
+  max_paginates_per 100
 end

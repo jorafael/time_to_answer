@@ -4,6 +4,7 @@
   <h1 class="h3 mb-2 text-gray-800">Listando Administradores</h1>
   <div class="card shadow mb-4">
     <div class="card-header py-3">
+
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -28,9 +29,9 @@
                   <%= link_to edit_admins_backoffice_admin_path(admin), class:"btn btn-primary btn-circle btn-sm" do %>
                       <i class="fas fa-edit"></i>
                   <% end %>
-                  <a href="#" class="btn btn-danger btn-circle btn-sm">
-                      <i class="fas fa-trash"></i>
-                  </a>
+                  <%= link_to admins_backoffice_admin_path(admin), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Deseja realmente excluir esse administrador?"} do %>
+                      <i class="fas fa-minus"></i>
+                  <% end %>
                 </td>
               </tr>
             <% end %>

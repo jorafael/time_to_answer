@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "admin-lte": "^3.0.1",
+    "bootstrap-growl-ifightcrime": "^1.1.0",
     "startbootstrap-sb-admin-2": "^4.0.7"
   }
 }

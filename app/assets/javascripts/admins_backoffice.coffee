@@ -6,3 +6,4 @@
 //= require bootstrap/dist/js/bootstrap.bundle.min
 //= require jquery.easing/jquery.easing.min
 //= require startbootstrap-sb-admin-2/js/sb-admin-2.min
+//= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl

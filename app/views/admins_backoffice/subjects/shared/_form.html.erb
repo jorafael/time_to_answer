@@ -1,0 +1,37 @@
+<div class="container-fluid">
+	<h1 class="h3 mb-2 text-gray-800"><%= action_message %></h1>
+  <% if @subject.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <h6 class="m-0 font-weight-bold text-primary">Foram encontrados os seguintes erros:</h6>
+      <br/>
+      <ul>
+        <% @subject.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+      <%= "#{action_message} Assunto/Área" %>
+	  </div>
+		<div class="card-body">
+			<div class="row">
+				<%# <div class="col-lg-6"> %>
+				<div class="col">
+					<%= form_with(model: [ :admins_backoffice, @subject ], local: true) do |form| %>
+						<div class="form-group">
+							<%= form.label :description %>
+							<%= form.text_field :description, class:"form-control", placeholder:"Descrição" %>
+						</div>                           
+						<button type="submit" class="btn btn-primary">Salvar</button>
+						<%# <button type="reset" class="btn btn-primary">Limpar</button> %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

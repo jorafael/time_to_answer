@@ -1,0 +1,46 @@
+<%# <h1>Listando Assuntos/Áreas</h1> %>
+
+<div class="container-fluid">
+  <h1 class="h3 mb-2 text-gray-800">Listando Assuntos/Áreas</h1>
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th style="width: 80px">#</th>
+              <th>Descrição</th>
+              <th style="width:87px">
+                <%= link_to new_admins_backoffice_subject_path, class:"btn btn-success btn-circle btn-sm" do %>
+                    <i class="fas fa-plus"></i>
+                <% end %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @subjects.each do |subject| %>
+              <tr>
+                <td><%= subject.id %></td>
+                <td><%= subject.description %></td>
+                <td>
+                  <%= link_to edit_admins_backoffice_subject_path(subject), class:"btn btn-primary btn-circle btn-sm" do %>
+                      <i class="fas fa-edit"></i>
+                  <% end %>
+                  <%= link_to admins_backoffice_subject_path(subject), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Deseja realmente excluir esse Assunto/Área?"} do %>
+                      <i class="fas fa-minus"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="text-center">
+          <%= paginate @subjects %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

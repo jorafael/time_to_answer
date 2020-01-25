@@ -7,6 +7,9 @@
       subject:
         one: Assunto/Área
         other: Assuntos/Áreas
+      question:
+        one: Questão
+        other: Questões
       user:
         one: Usuário
         other: Usuários
@@ -16,6 +19,11 @@
         email: Email
         password: Senha
         password_confirmation: Confirmação de Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      question:
+        id: Id
+        description: Descrição
         created_at: Criado em
         updated_at: Atualizado em
       subject:

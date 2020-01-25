@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get 'welcome/index' # Dashboard
     resources :admins # Administradores
     resources :subjects # Assuntos/Áreas
+    resources :questions # Questões
   end
   namespace :site do
     get 'welcome/index'

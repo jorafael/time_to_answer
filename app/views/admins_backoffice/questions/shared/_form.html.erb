@@ -25,7 +25,11 @@
 					<%= form_with(model: [ :admins_backoffice, @question ], local: true) do |form| %>
 						<div class="form-group">
 							<%= form.label :description %>
-							<%= form.text_field :description, class:"form-control", placeholder:"Descrição" %>
+							<%= form.text_area :description, class:"form-control", placeholder:"Descrição", rows: 5 %>
+						</div>                           
+						<div class="form-group">
+							<%= form.label :subject_id %>
+							<%= form.collection_select(:subject_id, @subjects, :id, :description, {}, { class:"form-control" }) %>
 						</div>                           
 						<button type="submit" class="btn btn-primary">Salvar</button>
 						<%# <button type="reset" class="btn btn-primary">Limpar</button> %>

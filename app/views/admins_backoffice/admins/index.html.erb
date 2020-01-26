@@ -12,7 +12,7 @@
           <thead>
             <tr>
               <th style="width: 80px">#</th>
-              <th>Email</th>
+              <th><%= translate_attribute(@admins, :email) %></th>
               <th style="width:87px">
                 <%= link_to new_admins_backoffice_admin_path, class:"btn btn-success btn-circle btn-sm" do %>
                     <i class="fas fa-plus"></i>

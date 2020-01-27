@@ -1,7 +1,7 @@
 <%# <h1>Listando Questões</h1> %>
 
 <div class="container-fluid">
-  <h1 class="h3 mb-2 text-gray-800"><%= t('messages.listing', model: @questions.model_name.human(count: 2)) %></h1>
+  <h1 class="h3 mb-2 text-gray-800"><%= t('message.listing', model: @questions.model_name.human(count: 2)) %></h1>
   <div class="card shadow mb-4">
     <div class="card-header py-3">
 
@@ -31,7 +31,7 @@
                   <%= link_to edit_admins_backoffice_question_path(question), class:"btn btn-primary btn-circle btn-sm" do %>
                       <i class="fas fa-edit"></i>
                   <% end %>
-                  <%= link_to admins_backoffice_question_path(question), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: t('messages.confirm_with', item: question.description.truncate(15))} do %>
+                  <%= link_to admins_backoffice_question_path(question), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: t('message.confirm_with', item: question.description.truncate(15))} do %>
                       <i class="fas fa-minus"></i>
                   <% end %>
                 </td>

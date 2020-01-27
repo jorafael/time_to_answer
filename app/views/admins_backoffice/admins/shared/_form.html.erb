@@ -16,7 +16,7 @@
   <% end %>
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-      <%= "#{action_message} Administrador" %>
+      <%= "#{action_message}" %>
 	  </div>
 		<div class="card-body">
 			<div class="row">
@@ -25,21 +25,21 @@
 					<%= form_with(model: [ :admins_backoffice, @admin ], local: true) do |form| %>
 						<div class="form-group">
 							<%= form.label :email %>
-							<%= form.text_field :email, class:"form-control", placeholder:"Email do administrador" %>
+							<%= form.text_field :email, class:"form-control", placeholder: "#{Admin.human_attribute_name(:email)}" %>
 						</div>                           
 							<div class="form-group">
 									<%= form.label :password %>
 									<%= form.password_field :password, 
 														class:"form-control", 
-														placeholder: "Senha" %>
+														placeholder: "#{Admin.human_attribute_name(:password)}" %>
 							</div>
 							<div class="form-group">
 									<%= form.label :password_confirmation %>
 									<%= form.password_field :password_confirmation, 
 														class:"form-control", 
-														placeholder: "Confirmação da Senha" %>
+														placeholder: "#{Admin.human_attribute_name(:password_confirmation)}" %>
 							</div>
-						<button type="submit" class="btn btn-primary">Salvar</button>
+						<button type="submit" class="btn btn-primary"><%= t('button.submit')%></button>
 						<%# <button type="reset" class="btn btn-primary">Limpar</button> %>
 					<% end %>
 				</div>

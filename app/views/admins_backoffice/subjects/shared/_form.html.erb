@@ -16,7 +16,7 @@
   <% end %>
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-      <%= "#{action_message} Assunto/Área" %>
+      <%= "#{action_message}" %>
 	  </div>
 		<div class="card-body">
 			<div class="row">
@@ -25,9 +25,9 @@
 					<%= form_with(model: [ :admins_backoffice, @subject ], local: true) do |form| %>
 						<div class="form-group">
 							<%= form.label :description %>
-							<%= form.text_field :description, class:"form-control", placeholder:"Descrição" %>
+							<%= form.text_field :description, class:"form-control", placeholder:"#{Subject.human_attribute_name(:description)}" %>
 						</div>                           
-						<button type="submit" class="btn btn-primary">Salvar</button>
+						<button type="submit" class="btn btn-primary"><%= t('button.submit')%></button>
 						<%# <button type="reset" class="btn btn-primary">Limpar</button> %>
 					<% end %>
 				</div>

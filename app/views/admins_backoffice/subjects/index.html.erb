@@ -1,7 +1,7 @@
 <%# <h1>Listando Assuntos/Áreas</h1> %>
 
 <div class="container-fluid">
-  <h1 class="h3 mb-2 text-gray-800">Listando Assuntos/Áreas</h1>
+  <h1 class="h3 mb-2 text-gray-800"><%= t('messages.listing', model: @subjects.model_name.human(count: 2)) %></h1>
   <div class="card shadow mb-4">
     <div class="card-header py-3">
 
@@ -29,7 +29,7 @@
                   <%= link_to edit_admins_backoffice_subject_path(subject), class:"btn btn-primary btn-circle btn-sm" do %>
                       <i class="fas fa-edit"></i>
                   <% end %>
-                  <%= link_to admins_backoffice_subject_path(subject), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Deseja realmente excluir esse Assunto/Área?"} do %>
+                  <%= link_to admins_backoffice_subject_path(subject), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: t('messages.confirm_with', item: subject.description.truncate(15))} do %>
                       <i class="fas fa-minus"></i>
                   <% end %>
                 </td>
